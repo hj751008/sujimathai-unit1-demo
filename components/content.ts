@@ -22,3 +22,31 @@ export const demoSteps = [
   "한 번의 tutor turn 제출",
   "필요하면 raw operator log 저장",
 ];
+
+export const heroStats = [
+  { value: "1", label: "first public slice" },
+  { value: "3", label: "live routes" },
+  { value: "Now", label: "proof-first scope" },
+];
+
+export const capabilityPillars = [
+  {
+    title: "Transcript Replay",
+    body: "검증된 Unit 1 흐름을 같은 구조로 다시 재생할 수 있다.",
+  },
+  {
+    title: "Blocker-First Handoff",
+    body: "완료 뒤 다음 guided session을 보수적으로 다시 계획한다.",
+  },
+  {
+    title: "One-Turn Tutor Loop",
+    body: "한 번의 관찰 입력으로 다음 action이 실제로 바뀐다.",
+  },
+];
+
+export const sequenceMoments = [
+  "Learner record loads with the current Unit 1 state.",
+  "Replay confirms the same tutoring path can be reconstructed.",
+  "The next blocker-first session is planned before expansion.",
+  "Operator evidence remains structured enough to inspect and compare.",
+];

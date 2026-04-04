@@ -1,17 +1,24 @@
 import Link from "next/link";
 
-import { demoSteps, proofFacts } from "@/components/content";
+import {
+  capabilityPillars,
+  demoSteps,
+  heroStats,
+  proofFacts,
+  sequenceMoments,
+} from "@/components/content";
 
 export default function HomePage() {
   return (
     <main className="page-stack">
-      <section className="hero-poster">
+      <section className="hero-poster hero-poster-v2">
         <div className="hero-copy">
           <p className="eyebrow">Unit 1 Tutor Flow Demo</p>
-          <h1>소인수분해를 실제 tutoring flow로 보여주는 첫 결과물</h1>
+          <h1>소인수분해를 설명하는 게 아니라, 실제 tutoring flow를 보여준다</h1>
           <p className="lead">
-            문서만 정리한 프로젝트가 아니라, Unit 1에서 replay, handoff,
-            next-step planning이 실제로 이어지는 결과를 보여준다.
+            첫 Vercel 결과물은 전체 커리큘럼을 약속하지 않는다. 대신 Unit 1에서
+            replay, handoff, next-step planning이 실제로 이어지는 장면만 또렷하게
+            보여준다.
           </p>
           <div className="cta-row">
             <Link href="/unit1" className="cta-primary">
@@ -21,45 +28,56 @@ export default function HomePage() {
               검증 근거 보기
             </Link>
           </div>
+          <div className="hero-stats" aria-label="Demo snapshot metrics">
+            {heroStats.map((item) => (
+              <div key={item.label} className="hero-stat">
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="hero-proof">
-          <span className="proof-chip">Unit 1 first</span>
-          <span className="proof-chip">runtime-complete</span>
-          <span className="proof-chip">pilot-compared</span>
+
+        <div className="hero-stage">
+          <div className="stage-glow" aria-hidden="true" />
+          <div className="stage-panel">
+            <p className="eyebrow">Proof First Surface</p>
+            <h2>현재 landing이 보여주는 한 가지</h2>
+            <ol className="sequence-list">
+              {sequenceMoments.map((moment, index) => (
+                <li key={moment}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <p>{moment}</p>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 
-      <section className="triptych">
-        <article>
-          <p className="eyebrow">What Is Real Today</p>
-          <h2>Transcript Replay</h2>
-          <p>검증된 Unit 1 흐름을 같은 구조로 다시 재생할 수 있다.</p>
-        </article>
-        <article>
-          <p className="eyebrow">What Is Real Today</p>
-          <h2>Blocker-First Handoff</h2>
-          <p>완료 후 다음 guided session이 보수적으로 다시 계획된다.</p>
-        </article>
-        <article>
-          <p className="eyebrow">What Is Real Today</p>
-          <h2>One-Turn Tutor Loop</h2>
-          <p>한 번의 관찰 입력으로 다음 action이 실제로 바뀐다.</p>
-        </article>
+      <section className="triptych triptych-premium">
+        {capabilityPillars.map((pillar) => (
+          <article key={pillar.title}>
+            <p className="eyebrow">What Is Real Today</p>
+            <h2>{pillar.title}</h2>
+            <p>{pillar.body}</p>
+          </article>
+        ))}
       </section>
 
-      <section className="story-grid">
-        <article className="story-panel emphasis">
+      <section className="story-grid story-grid-expanded">
+        <article className="story-panel emphasis story-panel-large">
           <p className="eyebrow">Why Unit 1 First</p>
-          <h2>가장 강하게 검증된 slice부터 보여준다</h2>
+          <h2>가장 강하게 검증된 slice부터 public surface로 꺼낸다</h2>
           <p>
-            현재 저장소에서 Unit 1은 가장 앞서 있다. 그래서 첫 Vercel 결과물은
-            전체 커리큘럼이 아니라, 하나의 tutoring loop가 실제로 작동하는지
-            보여주는 데 집중한다.
+            현재 저장소에서 Unit 1은 가장 앞서 있다. 그래서 첫 결과물은 전체
+            제품 약속보다, 하나의 tutoring loop가 실제로 작동한다는 사실을 먼저
+            보이게 만든다.
           </p>
         </article>
-        <article className="story-panel">
+        <article className="story-panel story-panel-steps">
           <p className="eyebrow">Demo Path</p>
-          <ol className="step-list">
+          <ol className="step-list step-list-strong">
             {demoSteps.map((step) => (
               <li key={step}>{step}</li>
             ))}
@@ -67,22 +85,22 @@ export default function HomePage() {
         </article>
       </section>
 
-      <section className="proof-band">
+      <section className="proof-band proof-band-v2">
         <div>
           <p className="eyebrow">Proof Snapshot</p>
-          <h2>현재 기준에서 확인된 사실만 말한다</h2>
+          <h2>현재 기준에서 확인된 사실만 앞에 둔다</h2>
         </div>
-        <ul className="fact-list">
+        <ul className="fact-list fact-list-strong">
           {proofFacts.map((fact) => (
             <li key={fact}>{fact}</li>
           ))}
         </ul>
       </section>
 
-      <section className="limits-band">
+      <section className="limits-band limits-band-v2">
         <div>
           <p className="eyebrow">Honest Limits</p>
-          <h2>이 페이지는 전체 제품 출시를 뜻하지 않는다</h2>
+          <h2>이 landing은 과장보다 범위 통제를 선택한다</h2>
         </div>
         <div className="limits-copy">
           <p>현재는 Unit 1이 첫 결과물이다.</p>

@@ -11,6 +11,19 @@ export const proofFacts = [
   "Local operator UI evidence and pilot-log comparison exist, but broad classroom validation is still out of scope.",
 ];
 
+export const proofLimits = [
+  "not broad classroom validation",
+  "not finalized mastery scoring",
+  "not full multi-unit product claim",
+];
+
+export const expansionRules = [
+  "source-backed content",
+  "validate-content pass",
+  "shared runtime replay and handoff verification",
+  "conservative prerequisite and policy docs",
+];
+
 export const unitOneSkills = [
   "U1-S1 to U1-S4: concept check, entry bridge, rewrite, verification",
   "U1-S5A to U1-S5D: transfer tasks built on prime factorization",
@@ -49,4 +62,32 @@ export const sequenceMoments = [
   "Replay confirms the same tutoring path can be reconstructed.",
   "The next blocker-first session is planned before expansion.",
   "Operator evidence remains structured enough to inspect and compare.",
+];
+
+export const unitOneCapabilities = [
+  "identify concept confusion before procedural expansion",
+  "reopen blocker-first practice instead of forcing forward movement",
+  "carry prime factorization into transfer tasks such as gcd and lcm",
+  "preserve structured operator evidence for review and comparison",
+];
+
+export const unitOneFlows = [
+  {
+    title: "Pilot A",
+    body: "concept check to verification habit",
+  },
+  {
+    title: "Pilot B",
+    body: "S5 transfer with blocker-first reopen",
+  },
+  {
+    title: "Pilot C",
+    body: "gcd/lcm transfer and reorder",
+  },
+];
+
+export const unitOneSurfaceChecks = [
+  "Unit 1 scope is visible before any broader curriculum claim.",
+  "Proof page separates confirmed facts from current limits.",
+  "The public demo keeps a clear path from landing to evidence.",
 ];

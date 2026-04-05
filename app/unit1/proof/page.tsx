@@ -1,4 +1,6 @@
-import { expansionRules, proofFacts, proofLimits } from "@/components/content";
+import Link from "next/link";
+
+import { expansionRules, proofFacts, proofLenses, proofLimits } from "@/components/content";
 
 export default function UnitOneProofPage() {
   return (
@@ -53,6 +55,16 @@ export default function UnitOneProofPage() {
         </article>
       </section>
 
+      <section className="proof-ladder">
+        {proofLenses.map((item) => (
+          <article key={item.title} className="proof-ladder-card">
+            <p className="eyebrow">Proof Lens</p>
+            <h2>{item.title}</h2>
+            <p>{item.body}</p>
+          </article>
+        ))}
+      </section>
+
       <section className="proof-band proof-band-v2">
         <div>
           <p className="eyebrow">Expansion Rule</p>
@@ -63,6 +75,25 @@ export default function UnitOneProofPage() {
             <li key={rule}>{rule}</li>
           ))}
         </ul>
+      </section>
+
+      <section className="closing-band closing-band-proof">
+        <div className="closing-copy">
+          <p className="eyebrow">After Proof</p>
+          <h2>근거를 본 뒤에는 다시 flow로 돌아가면 된다</h2>
+          <p>
+            이 데모는 proof page가 끝이 아니라, 공개 surface가 어디까지 정직하게
+            연결되는지 보여주는 확인 지점이다.
+          </p>
+        </div>
+        <div className="cta-row">
+          <Link href="/unit1" className="cta-primary">
+            Unit 1 flow로 돌아가기
+          </Link>
+          <Link href="/" className="cta-secondary">
+            홈으로
+          </Link>
+        </div>
       </section>
     </main>
   );

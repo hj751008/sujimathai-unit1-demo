@@ -24,6 +24,21 @@ export const expansionRules = [
   "conservative prerequisite and policy docs",
 ];
 
+export const proofLenses = [
+  {
+    title: "Confirmed Now",
+    body: "runtime-complete Unit 1 slice with transcript replay and structured operator evidence",
+  },
+  {
+    title: "Not Claimed Yet",
+    body: "broad classroom validation, final mastery scoring, and full multi-unit product promise",
+  },
+  {
+    title: "Next Gate",
+    body: "later units only attach after the same source-backed validation and runtime replay check",
+  },
+];
+
 export const unitOneSkills = [
   "U1-S1 to U1-S4: concept check, entry bridge, rewrite, verification",
   "U1-S5A to U1-S5D: transfer tasks built on prime factorization",
@@ -90,4 +105,10 @@ export const unitOneSurfaceChecks = [
   "Unit 1 scope is visible before any broader curriculum claim.",
   "Proof page separates confirmed facts from current limits.",
   "The public demo keeps a clear path from landing to evidence.",
+];
+
+export const closingSignals = [
+  "Visible proof-first landing",
+  "Replayable tutoring path",
+  "Conservative expansion rule",
 ];

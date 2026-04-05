@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import {
   capabilityPillars,
+  closingSignals,
   demoSteps,
   heroStats,
   proofFacts,
@@ -106,6 +107,34 @@ export default function HomePage() {
           <p>현재는 Unit 1이 첫 결과물이다.</p>
           <p>Unit 2와 Unit 3는 같은 validation gate를 통과한 뒤 붙는다.</p>
           <p>최종 mastery scoring과 broad classroom validation은 아직 아니다.</p>
+        </div>
+      </section>
+
+      <section className="closing-band">
+        <div className="closing-copy">
+          <p className="eyebrow">Next Click</p>
+          <h2>지금 보여줄 것은 두 단계면 충분하다</h2>
+          <p>
+            먼저 Unit 1 flow를 보고, 바로 proof 페이지에서 지금 주장 가능한 범위를
+            확인하면 된다.
+          </p>
+        </div>
+        <div className="closing-actions">
+          <div className="closing-tags" aria-label="Closing proof signals">
+            {closingSignals.map((signal) => (
+              <span key={signal} className="closing-tag">
+                {signal}
+              </span>
+            ))}
+          </div>
+          <div className="cta-row">
+            <Link href="/unit1" className="cta-primary">
+              Unit 1 flow 열기
+            </Link>
+            <Link href="/unit1/proof" className="cta-secondary">
+              proof scope 확인
+            </Link>
+          </div>
         </div>
       </section>
     </main>

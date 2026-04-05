@@ -7,6 +7,8 @@ This separate repo is the planned Vercel-facing landing surface for the first vi
 - public-facing Unit 1 landing page
 - Unit 1 detail page
 - Unit 1 proof page
+- curated share-ready screenshot set in `share-assets/unit1/`
+- broader local QA captures kept separately in `qa-snapshots/`
 
 ## Not Included Yet
 

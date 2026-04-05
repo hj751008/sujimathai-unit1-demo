@@ -22,8 +22,8 @@ export default function HomePage() {
             보여준다.
           </p>
           <div className="cta-row">
-            <Link href="/unit1" className="cta-primary">
-              Unit 1 데모 보기
+            <Link href="/unit1/flow" className="cta-primary">
+              실제 flow 보기
             </Link>
             <Link href="/unit1/proof" className="cta-secondary">
               검증 근거 보기
@@ -128,7 +128,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="cta-row">
-            <Link href="/unit1" className="cta-primary">
+            <Link href="/unit1/flow" className="cta-primary">
               Unit 1 flow 열기
             </Link>
             <Link href="/unit1/proof" className="cta-secondary">

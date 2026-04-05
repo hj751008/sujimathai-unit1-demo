@@ -49,6 +49,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <nav className="top-links">
               <Link href="/">Home</Link>
               <Link href="/unit1">Unit 1</Link>
+              <Link href="/unit1/flow">Flow</Link>
               <Link href="/unit1/proof">Proof</Link>
             </nav>
           </header>

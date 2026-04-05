@@ -53,7 +53,7 @@ export const demoSteps = [
 
 export const heroStats = [
   { value: "1", label: "first public slice" },
-  { value: "3", label: "live routes" },
+  { value: "4", label: "live routes" },
   { value: "Now", label: "proof-first scope" },
 ];
 
@@ -103,6 +103,7 @@ export const unitOneFlows = [
 
 export const unitOneSurfaceChecks = [
   "Unit 1 scope is visible before any broader curriculum claim.",
+  "A visible Unit 1 flow page now shows session start, observation form, and one-turn update.",
   "Proof page separates confirmed facts from current limits.",
   "The public demo keeps a clear path from landing to evidence.",
 ];
@@ -111,4 +112,74 @@ export const closingSignals = [
   "Visible proof-first landing",
   "Replayable tutoring path",
   "Conservative expansion rule",
+];
+
+export const unitOneVisibleFlow = {
+  start: {
+    action: "plan_new_session",
+    targetSkillId: "U1-S3",
+    currentLessonStepId: "STEP-U1-S2-ENTRY-BRIDGE",
+    title: "Entry Bridge With 24",
+    openingLine:
+      "Let's just find one easy way into the problem instead of solving everything at once.",
+    firstTutorQuestion: "What is the easiest divisor you can test first?",
+    nextLessonStepId: "STEP-U1-S3-REWRITE-CLEANLY",
+    remainingStepCount: 2,
+  },
+  observation: {
+    lessonStepId: "STEP-U1-S2-ENTRY-BRIDGE",
+    learnerResponsePrompt:
+      "Write the learner's first move for entering the factorization of 24.",
+    tutorNotePrompt:
+      "Note whether the learner used the idea that 24 is even to choose a starting divisor.",
+    fields: ["starts_with_two", "mentions_evenness"],
+    learnerResponse: "24 is even, so I should start by dividing by 2 first.",
+    tutorNote: "Learner chose 2 as the first easy divisor for 24.",
+  },
+  turn: {
+    nextAction: "continue_active_session",
+    decision: "completed",
+    sessionStatus: "in_progress",
+    completedStepIds: ["STEP-U1-S2-ENTRY-BRIDGE"],
+    currentLessonStepId: "STEP-U1-S3-REWRITE-CLEANLY",
+    firstTutorQuestion: "Which factors should still remain in the final line?",
+    remainingStepCount: 1,
+  },
+  handoff: {
+    action: "plan_new_session",
+    targetSkillId: "U1-S5A",
+    currentStepSkillId: "U1-S3",
+    currentLessonStepId: "STEP-U1-S3-REWRITE-CLEANLY",
+    title: "Rewrite the Final Factorization Cleanly",
+    openingLine:
+      "Your split-work is close; now let's turn it into one clean final factorization.",
+    firstTutorQuestion: "Which factors should still remain in the final line?",
+    nextLessonStepId: "STEP-U1-S5A-DIVISOR-COUNT-TRANSFER",
+    remainingStepCount: 2,
+    plannedFromSkillId: "U1-S5A",
+    recommendedNextSkillIds: ["U1-S3", "U1-S5A"],
+  },
+};
+
+export const unitOneFlowStages = [
+  {
+    label: "01",
+    title: "Session Start",
+    body: "learner record에서 실제 guided session을 열고 첫 질문을 고정한다.",
+  },
+  {
+    label: "02",
+    title: "Observation Form",
+    body: "현재 step에 맞는 prompt와 field set이 자동으로 붙는다.",
+  },
+  {
+    label: "03",
+    title: "One Turn Result",
+    body: "한 번의 관찰 입력 뒤 다음 step guide가 실제로 바뀐다.",
+  },
+  {
+    label: "04",
+    title: "Blocker-First Handoff",
+    body: "완료 transcript 뒤에는 다음 transfer task 전에 blocker step이 다시 열린다.",
+  },
 ];

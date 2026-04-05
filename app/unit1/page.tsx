@@ -19,6 +19,9 @@ export default function UnitOnePage() {
             task까지 이어지는 흐름을 다룬다.
           </p>
           <div className="cta-row">
+            <Link href="/unit1/flow" className="cta-primary">
+              실제 flow 보기
+            </Link>
             <Link href="/unit1/proof" className="cta-primary">
               검증 근거 보기
             </Link>
